@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body {
+            background-image: url("back.jpg");
+        }
+    </style>
+
+<body>
+    <div class="topnav">
+        <div class="logo">
+            <img src="logo1.svg" alt="logo">
+            <p class="logo_name">ResumeForge</p>
+        </div>
+        <a class="active" href="#home">Home</a>
+        <a class="active" href="#contact">Contact</a>
+        {{!-- <a class="active" href="2signup.hbs">login</a> --}}
+        <a class="active" href="login" id="login">Login</a>
+        <a class="active" href="#about">About</a>
+    </div>
+    <div class="container">
+        <a class="active" href="home/personal"><button id="btn" type="button">Create Resume</button></a>
+    </div>
+
+    <!-- HTML structure for the pop-up window -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Please log in to create your RESUME</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('login').addEventListener('click', function (event) {
+            window.location.href = '/login';
+        });
+
+        document.getElementById('btn').addEventListener('click', function (event) {
+            window.location.href = '/home/personal';
+        });
+        
+    </script>
+
+
+</body>
+
+</html>
